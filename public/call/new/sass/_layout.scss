@@ -1,0 +1,26 @@
+@mixin scaling-center-floater {
+  width: 600px;
+  margin: 0 auto;
+
+}
+
+
+div#header {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  justify-content: center;
+}
+
+div#content {
+  width: 100%;
+  
+  div#form_container{
+   @include scaling-center-floater;
+    
+  }
+  div#footer{
+    @include scaling-center-floater;
+    vertical-align: baseline;
+  }
+}
