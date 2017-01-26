@@ -1,0 +1,17 @@
+div#header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center; }
+
+div#content {
+  width: 100%; }
+  div#content div#form_container {
+    width: 600px;
+    margin: 0 auto; }
+  div#content div#footer {
+    width: 600px;
+    margin: 0 auto;
+    vertical-align: baseline; }
+
+/*# sourceMappingURL=style.css.map */
