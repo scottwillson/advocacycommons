@@ -7,7 +7,9 @@
     <link rel="stylesheet" type="text/css" href="/call/new/style/style.css" />
     <script type="text/javascript" src="/call/new/lib/jquery.js"></script>
     <script type="text/javascript" src="/call/new/lib/jquery.osdi.js"></script>
+    <script type="text/javascript" src="/call/new/lib/parsley.js"></script>
     <script type="text/javascript" src="/call/new/app/form.js"></script>
+    <script type="text/javascript" src="/call/new/app/validate.js"></script>
   </head>
   <body>
 		<div id="header">
@@ -19,9 +21,9 @@
 				<p>Lorem ipsum form content</p>
 				<form id="caller_data">
 						<ul id="main_form_elements">
-						<li><input name="email_address" type="text" placeholder="Email address" /></li>
-						<li><input name="postal_code" type="text" placeholder="ZIP code" /></li>
-						<li><input name="phone_number" type="text" placeholder="Cell phone" /></li>
+						<li><input name="email_address" type="text" placeholder="Email address" data-parsley-required data-parsley-type="email"/></li>
+						<li><input name="postal_code" type="text" placeholder="ZIP code" data-parsley-required data-parsley-type-"digits" data-parsley-zipcode /></li>
+						<li><input name="phone_number" type="text" placeholder="Cell phone" data-parsley-type="digits" /></li>
 						<li>
 							<input name="custom[sms_opt_in]" id="custom[sms_opt_in]" type="checkbox" />
 							<label for="custom[sms_opt_in]">Opt-in to SMS</label>
