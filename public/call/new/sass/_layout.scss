@@ -15,6 +15,10 @@ div#header {
 div#content {
   width: 100%;
   
+  div#title_container {
+    @include scaling-center-floater;
+  }
+  
   div#form_container{
    @include scaling-center-floater;
     

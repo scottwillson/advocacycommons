@@ -10,15 +10,27 @@
     <script type="text/javascript" src="/call/new/lib/parsley.js"></script>
     <script type="text/javascript" src="/call/new/app/validate.js"></script>
     <script type="text/javascript" src="/call/new/app/call.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('a#terms_link').click(function(){
+          alert("Advocacy Commons SMS Terms & Conditions:\nBy signing up and entering my telephone number, I consent to receive and authorize Advocacy Commons to send (i) SMS text messages, (ii) prerecorded audio messages (including calls to cellular phones), or (iii) other communications sent by an autodialer to my mobile device.");
+        });
+      });
+    </script>
   </head>
   <body>
 		<div id="header">
 			<span class="header-item">A project of Advocacy Commons</span>
 		</div>
     <div id="content">
+      <div id="title_container">
+        <div id="title">Stop Rex Tillerson</div>
+      </div>
 			<div id="form_container">
 				<noscript><span id="no_js_warning"><br />It looks like you have JavaScript disabled.  You'll need it to use this site.  <a href="http://enable-javascript.com/" target="_blank">Here</a> are some instructions.</span></noscript>
-				<p>Lorem ipsum form content</p>
+				<div id="pre_form_text">
+					<p>Rex Tillerson is bought and paid for by the oil and gas industry.  And Donald Trump wants to put him in charge of America's foreign policy.  Enter your information here to call your Senators and tell them to vote NO on Rex Tillerson.</p>
+				</div>
 				<form id="caller_data">
 						<ul id="main_form_elements">
 						<li><input name="email_address" type="text" placeholder="Email address" data-parsley-required data-parsley-type="email"/></li>

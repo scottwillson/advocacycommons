@@ -6,6 +6,9 @@ div#header {
 
 div#content {
   width: 100%; }
+  div#content div#title_container {
+    width: 600px;
+    margin: 0 auto; }
   div#content div#form_container {
     width: 600px;
     margin: 0 auto; }
