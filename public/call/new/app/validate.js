@@ -25,7 +25,6 @@ $(document).ready(function(){
 	form = $('form#caller_data');
 	$(form).on('submit', function(e) {
 		e.preventDefault();
-		console.log('Default prevented.');
 	});
 	var parsley_instance = $(form).parsley();
 
@@ -37,8 +36,8 @@ $(document).ready(function(){
 			endpoint: 'https://actionnetwork.org/api/v2/forms/773c08ec-e3b6-4596-878d-3653b39a3d3c/submissions',
 			immediate: true,
 			done: function(data, status) {
-				console.log('Got status ' + status);
-				console.log(data);
+				console.log('Submitted data to AN.');
+				callMeMaybe('7',$('input[name="phone_number"]').val(),$('input[name="postal_code"]').val());
 			},
 			fail : function(jqXHR, textStatus, errorThrown) {
 				console.log('Error ' + errorThrown + ' ' + text_status);
