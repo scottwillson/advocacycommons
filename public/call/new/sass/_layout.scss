@@ -18,7 +18,9 @@ $min-width: 492px;
 
 body {
   margin: 0;
-
+  p {
+    margin: 0;
+  }
 }
 div#header {
   display: flex;
@@ -66,7 +68,7 @@ div#content {
 		  float: right;
 		  width: 55%;
 		}
-		div#form_full_desc {
+		div#form_full_desc, div#script {
 		  display: none;
 		}
   }

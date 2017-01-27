@@ -18,8 +18,13 @@ function callMeMaybe(campaign,phone,zip) {
 				console.log('Got response ' + res.status + ' ' + res.statusText);
 				targetHTML = 'Looks like there was an error with your call (' + res.status + ' ' + res.statusText + ').  Reload the page and give it another shot.'
 			}
-			$('div#pre_form_text').html(targetHTML);
-			$('form#caller_data').slideUp();
+			$('div#form_teaser, div#form_full_desc').slideUp();
+			$('div#script')
+			  .html(targetHTML)
+			  .slideDown();
+			$('div#form_container').fadeTo(500,0.2);
+			$('input').attr('disabled','true');
+			
 		}
 	});
 }

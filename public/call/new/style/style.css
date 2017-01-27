@@ -1,6 +1,8 @@
 /* Variables */
 body {
   margin: 0; }
+  body p {
+    margin: 0; }
 
 div#header {
   display: flex;
@@ -41,7 +43,7 @@ div#content {
     div#content div#meta_form {
       float: right;
       width: 55%; } }
-  div#content div#meta_form div#form_full_desc {
+  div#content div#meta_form div#form_full_desc, div#content div#meta_form div#script {
     display: none; }
 
 div#footer {
