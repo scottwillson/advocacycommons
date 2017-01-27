@@ -1,30 +1,84 @@
-@mixin scaling-center-floater {
-  width: 600px;
-  margin: 0 auto;
+/* Variables */
+$header-color: grey;
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$min-width: 492px;
 
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
 }
 
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
 
+body {
+  margin: 0;
+
+}
 div#header {
   display: flex;
   flex-direction: row;
   width:100%;
   justify-content: center;
+  height: 2em;
+  align-items: center;
+  //Some of these belong in a different file.
+  background-color: $header-color;
+  margin-bottom: 1em;
 }
 
 div#content {
-  width: 100%;
-  
-  div#title_container {
-    @include scaling-center-floater;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  @include desktop {
+    width: 800px;
   }
-  
+  @include tablet {
+    width: 600px;
+  }
+  div#form_title_container {
+    margin-bottom: 1em;
+  }
   div#form_container{
-   @include scaling-center-floater;
-    
+    @include desktop {
+			float:left;
+			width: 40%;
+    }
+    @include tablet {
+      float: left;
+      width: 40%;
+    }
   }
-  div#footer{
-    @include scaling-center-floater;
-    vertical-align: baseline;
+  
+  div#meta_form {
+    @include desktop {
+			float:right;
+			width: 55%;
+		}
+		@include tablet {
+		  float: right;
+		  width: 55%;
+		}
+		div#form_full_desc {
+		  display: none;
+		}
+  }
+}
+  
+div#footer{
+  clear: both;
+  padding: 0 5%;
+  div#partner_logos {
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
   }
 }
