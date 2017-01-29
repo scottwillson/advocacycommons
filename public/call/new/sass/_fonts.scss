@@ -8,8 +8,3 @@
 @mixin body-font {
    font-family: 'Roboto Slab', serif;
 }
-
-body {
-  @include body-font;
-  background-color: #f8f8f8;
-}
