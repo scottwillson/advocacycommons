@@ -1,5 +1,5 @@
 AdvocacyCommonsSchema = GraphQL::Schema.define do
-  #query QueryType
+  query QueryType
 
   resolve_type ->(obj, ctx) do
     #{ Droid => DroidType, Human => HumanType }.fetch(obj.class)

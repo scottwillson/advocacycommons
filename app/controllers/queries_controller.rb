@@ -5,8 +5,8 @@ class QueriesController < ApplicationController
   def create
     query_string = params[:query]
     query_variables = ensure_hash(params[:variables])
-    #result = AdvocacyCommonsSchema.execute(query_string, variables: query_variables)
-    result = {}
+    result = AdvocacyCommonsSchema.execute(query_string, variables: query_variables)
+    # result = {}
     render json: result
   end
 

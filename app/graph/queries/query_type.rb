@@ -23,3 +23,16 @@ QueryType = GraphQL::ObjectType.define do
   #field :droid, DroidType, field: FetchField.new(type: DroidType, model: Droid)
   field :node, GraphQL::Relay::Node.field
 end
+
+QueryType = GraphQL::ObjectType.define do
+  name "Query"
+  description "The query root for this schema"
+
+  field :group do
+    type GroupType
+    argument :id, !types.ID
+    resolve -> (obj, args, ctx) {
+      Group.find(args[:id])
+    }
+  end
+end

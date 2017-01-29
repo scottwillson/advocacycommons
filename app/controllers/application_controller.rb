@@ -1,3 +1,7 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  # serve as app
+  #protect_from_forgery with: :exception
+
+  #serve as api
+  protect_from_forgery with: :null_session
 end

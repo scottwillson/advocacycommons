@@ -58,10 +58,11 @@ Rails.application.routes.draw do
     end
   end
 
-  #mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/queries"
-  resources :queries
+  mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/queries"
+
+  resources :queries, via: [:post, :options]
   resource :sha, only: :show
   resources :zipcodes, only: :show
-  get '/.well-known/acme-challenge/:id', to: 'wellknown#show'
+  #get '/.well-known/acme-challenge/:id', to: 'wellknown#show'
 
 end

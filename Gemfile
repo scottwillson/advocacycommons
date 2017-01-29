@@ -18,6 +18,9 @@ gem 'devise'
 gem 'bootstrap', '~> 4.0.0.alpha5'
 gem 'twitter-bootstrap-rails'
 
+# allow cross-origin requests from the react app to the api server
+gem 'rack-cors', :require => 'rack/cors'
+
 # postgresql database adatper
 gem 'pg'
 gem 'graphql'

@@ -8,10 +8,20 @@ import SignUp from '../components/forms/signup';
 
 import style from './group.scss';
 
-import getData from '../util/get-data';
+import queryData from '../util/post-data';
 
 // sample data hosted as json
-const uri = 'https://benvoluto.github.io/ac-sample.json';
+// const uri = 'https://benvoluto.github.io/ac-sample.json';
+
+// data from graphql api
+const query = `{
+  group(id: 1) {
+    name
+    description
+    featured_image_url
+  }
+}`;
+const uri = `http://test.advocacycommons.org:3000/queries?query=${query}`;
 
 class Group extends Component {
   constructor(props) {
@@ -24,13 +34,12 @@ class Group extends Component {
   }
 
   componentDidMount() {
-    getData(uri)
+    queryData(uri)
       .then((dataResponse) => {
-        const groupData = dataResponse.find(element => element.group.slug === this.state.slug);
-
+        const groupData = dataResponse;
         if (groupData) {
           this.setState({
-            data: groupData.group,
+            data: groupData.data.group,
           });
         }
       });
@@ -47,6 +56,8 @@ class Group extends Component {
         contact_email: contactEmail,
         contact_phone: contactPhone,
         facebook_page_url: facebookPageUrl,
+        featured_image_url: image,
+        description,
         // stats,
         // leaders,
         // members,
@@ -108,6 +119,14 @@ class Group extends Component {
         <div className="group" style={style}>
           <div className="group-main">
             <a href={url} className="group-title">{name}</a>
+            <img
+              role="presentation"
+              src={image}
+              className="group-image"
+            />
+            <div className="group-description">
+              {description}
+            </div>
             <UpdateList
               sticky
               updates={stickyUpdates}
