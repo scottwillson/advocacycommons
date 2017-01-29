@@ -56,8 +56,8 @@ $(document).ready(function(){
 				callMeMaybe('7',$('input[name="phone_number"]').val(),$('input[name="postal_code"]').val());
 			},
 			fail : function(jqXHR, textStatus, errorThrown) {
-				console.log('Error ' + errorThrown + ' ' + text_status);
-				console.log(jqXHR);
+				console.log('Error ' + errorThrown + ' ' + textStatus);
+				console.log(jqXHR.responseText);
 			}
 		});
 	})
