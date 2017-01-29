@@ -1,0 +1,23 @@
+div#footer {
+  height: 2em;
+	div#partner_logos {
+	  height: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		@include desktop {
+			margin: 0 -5%;
+		}
+		@include tablet {
+			margin: 0 -5%;
+		}
+		div.partner-logo-div {
+		  height: 100%;
+			padding: 0 5%;
+			img.partner-image {
+				height: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+}
