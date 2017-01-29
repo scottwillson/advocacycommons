@@ -19,12 +19,6 @@ $tablet-content-width: 700px;
   }
 }
 
-body {
-  margin: 0;
-  p {
-    margin: 0;
-  }
-}
 
 div#header {
   display: flex;
@@ -84,21 +78,5 @@ div#footer{
   @include tablet {
     width: $tablet-content-width;
   }
-  div#partner_logos {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		@include desktop {
-		  margin: 0 -5%;
-		}
-		@include tablet {
-			margin: 0 -5%;
-		}
-		div.partner-logo-div {
-		  padding: 0 5%;
-		  img.partner-image {
-		    width: 100%;
-		  }
-		}
-  }
+ 
 }

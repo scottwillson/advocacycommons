@@ -1,11 +1,6 @@
-@import "https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700";
+@import "https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab";
 /* Screen variables */
 /* Content width variables */
-body {
-  margin: 0; }
-  body p {
-    margin: 0; }
-
 div#header {
   display: flex;
   flex-direction: row;
@@ -55,20 +50,6 @@ div#footer {
   @media (min-width: 768px) and (max-width: 1023px) {
     div#footer {
       width: 700px; } }
-  div#footer div#partner_logos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
-    @media (min-width: 1024px) {
-      div#footer div#partner_logos {
-        margin: 0 -5%; } }
-    @media (min-width: 768px) and (max-width: 1023px) {
-      div#footer div#partner_logos {
-        margin: 0 -5%; } }
-    div#footer div#partner_logos div.partner-logo-div {
-      padding: 0 5%; }
-      div#footer div#partner_logos div.partner-logo-div img.partner-image {
-        width: 100%; }
 
 /* Variables */
 div#form_title_container div#form_title {
@@ -118,8 +99,11 @@ div#form_container form#caller_data ul#main_form_elements li ul.parsley-errors-l
   div#form_container form#caller_data ul#main_form_elements li ul.parsley-errors-list.filled li {
     list-style-type: none; }
 
+/* Variables */
 body {
+  margin: 0;
   font-family: 'Roboto Slab', serif;
+  color: #111;
   background-color: #f8f8f8;
   font-size: 16px; }
   @media (min-width: 1024px) {
@@ -129,10 +113,31 @@ body {
     body {
       font-size: 16px; } }
   body a {
-    color: inherit;
-    font-weight: bold;
+    color: #49a7e9;
     text-decoration: none; }
     body a:hover {
       text-decoration: underline; }
+  body p {
+    margin: 0; }
+
+div#footer {
+  height: 2em; }
+  div#footer div#partner_logos {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    @media (min-width: 1024px) {
+      div#footer div#partner_logos {
+        margin: 0 -5%; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      div#footer div#partner_logos {
+        margin: 0 -5%; } }
+    div#footer div#partner_logos div.partner-logo-div {
+      height: 100%;
+      padding: 0 5%; }
+      div#footer div#partner_logos div.partner-logo-div img.partner-image {
+        height: 100%;
+        max-width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
