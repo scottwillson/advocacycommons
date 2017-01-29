@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab";
+@import "https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700";
 /* Screen variables */
 /* Content width variables */
 body {
@@ -101,6 +101,9 @@ div#form_container form#caller_data ul#main_form_elements {
         div#form_container form#caller_data ul#main_form_elements li input[type="submit"]:hover {
           background-color: #ccc; }
 
+div#meta_form p {
+  margin-bottom: 1em; }
+
 div#header {
   background-color: #c869bf;
   font-family: 'Roboto', sans-serif;
@@ -125,5 +128,11 @@ body {
   @media (min-width: 768px) and (max-width: 1023px) {
     body {
       font-size: 16px; } }
+  body a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none; }
+    body a:hover {
+      text-decoration: underline; }
 
 /*# sourceMappingURL=style.css.map */
