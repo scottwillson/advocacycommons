@@ -22,11 +22,11 @@ div#form_container {
 				}
 				input {	  
 				border: 1px solid $form_border_color;
+				transition: all .1s linear;
 				border-radius: 3px;
 					&[type="text"] {
 						width: 100%;
-						height: 3em;
-						line-height: 2em;
+						font-size: 1em;
 						padding: 0.5em;
 					}
 					&[type="submit"] {
@@ -35,7 +35,6 @@ div#form_container {
 						height: 2em;
 						font-size: 1em;
 						background-color: $form_button_color;
-						transition: all .1s linear;
 						&:hover {
 							background-color: $form_button_hover_color;
 						}

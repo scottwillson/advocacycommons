@@ -86,19 +86,18 @@ div#form_container form#caller_data ul#main_form_elements {
       font-size: 0.75em; }
     div#form_container form#caller_data ul#main_form_elements li input {
       border: 1px solid #aaa;
+      transition: all .1s linear;
       border-radius: 3px; }
       div#form_container form#caller_data ul#main_form_elements li input[type="text"] {
         width: 100%;
-        height: 3em;
-        line-height: 2em;
+        font-size: 1em;
         padding: 0.5em; }
       div#form_container form#caller_data ul#main_form_elements li input[type="submit"] {
         width: 100%;
         text-align: center;
         height: 2em;
         font-size: 1em;
-        background-color: #bbb;
-        transition: all .1s linear; }
+        background-color: #bbb; }
         div#form_container form#caller_data ul#main_form_elements li input[type="submit"]:hover {
           background-color: #ccc; }
 
