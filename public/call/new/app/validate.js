@@ -42,7 +42,7 @@ $(document).ready(function(){
 	    'action_network:referrer_data' : {
 	      'source' : query_string.get('source'),
 	      'referrer' : query_string.get('referrer'),
-	      'website' : 'www.advocacycommons.org'
+	      'website' : 'http://www.advocacycommons.org'
 	    }
 	  };
 	  console.log(OSDIBody);
@@ -53,11 +53,11 @@ $(document).ready(function(){
 			immediate: true,
 			done: function(data, status) {
 				console.log('Submitted data to AN.');
-				callMeMaybe('7',$('input[name="phone_number"]').val(),$('input[name="postal_code"]').val());
+				//callMeMaybe('7',$('input[name="phone_number"]').val(),$('input[name="postal_code"]').val());
 			},
 			fail : function(jqXHR, textStatus, errorThrown) {
 				console.log('Error ' + errorThrown + ' ' + textStatus);
-				console.log(jqXHR.responseText);
+				console.log(jqXHR);
 			}
 		});
 	})
