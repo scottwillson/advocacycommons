@@ -1,3 +1,8 @@
+@import "https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab";
+body {
+  font-family: 'Roboto Slab', serif;
+  background-color: #f8f8f8; }
+
 /* Variables */
 body {
   margin: 0; }
@@ -11,7 +16,6 @@ div#header {
   justify-content: center;
   height: 2em;
   align-items: center;
-  background-color: grey;
   margin-bottom: 1em; }
 
 div#content {
@@ -26,7 +30,7 @@ div#content {
     div#content {
       width: 600px; } }
   div#content div#form_title_container {
-    margin-bottom: 1em; }
+    margin-bottom: 0.5em; }
   @media (min-width: 1024px) {
     div#content div#form_container {
       float: left;
@@ -55,8 +59,12 @@ div#footer {
     justify-content: space-between; }
 
 /* Variables */
+div#form_title_container div#form_title {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: 2em; }
+
 div#form_container form#caller_data ul#main_form_elements {
-  font-family: Helvetica;
   list-style-type: none;
   padding: 0;
   margin: 0; }
@@ -80,5 +88,19 @@ div#form_container form#caller_data ul#main_form_elements {
       transition: all .1s linear; }
     div#form_container form#caller_data ul#main_form_elements li input[type="submit"]:hover {
       background-color: #ccc; }
+
+div#header {
+  background-color: #c869bf;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: white; }
+
+div#form_container form#caller_data ul#main_form_elements li input[type="text"].parsley-error {
+  border: 1px solid #c869bf; }
+div#form_container form#caller_data ul#main_form_elements li ul.parsley-errors-list.filled {
+  font-size: .75em;
+  padding-left: 1em; }
+  div#form_container form#caller_data ul#main_form_elements li ul.parsley-errors-list.filled li {
+    list-style-type: none; }
 
 /*# sourceMappingURL=style.css.map */

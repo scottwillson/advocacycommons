@@ -1,0 +1,15 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab';
+
+@mixin title-font {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+@mixin body-font {
+   font-family: 'Roboto Slab', serif;
+}
+
+body {
+  @include body-font;
+  background-color: #f8f8f8;
+}

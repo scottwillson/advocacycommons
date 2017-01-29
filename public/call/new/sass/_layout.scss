@@ -1,5 +1,4 @@
 /* Variables */
-$header-color: grey;
 $desktop-width: 1024px;
 $tablet-width: 768px;
 $min-width: 492px;
@@ -30,8 +29,6 @@ div#header {
   justify-content: center;
   height: 2em;
   align-items: center;
-  //Some of these belong in a different file.
-  background-color: $header-color;
   margin-bottom: 1em;
 }
 
@@ -47,7 +44,7 @@ div#content {
     width: 600px;
   }
   div#form_title_container {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
   }
   div#form_container{
     @include desktop {
