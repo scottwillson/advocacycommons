@@ -1,7 +1,11 @@
-/* Variables */
+/* Screen variables */
 $desktop-width: 1024px;
 $tablet-width: 768px;
-$min-width: 492px;
+
+/* Content width variables */
+$desktop-content-width: 900px;
+$tablet-content-width: 700px;
+
 
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
@@ -33,15 +37,13 @@ div#header {
 }
 
 div#content {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 5%;
-  padding-right: 5%;
+  margin: 0 auto;
+  padding: 0 5%;
   @include desktop {
-    width: 800px;
+    width: $desktop-content-width;
   }
   @include tablet {
-    width: 600px;
+    width: $tablet-content-width;
   }
   div#form_title_container {
     margin-bottom: 0.5em;
@@ -74,11 +76,29 @@ div#content {
   
 div#footer{
   clear: both;
-  padding: 1em 5% 0 5%;
+  padding-top: 1em;
+  margin: 0 auto;
+  @include desktop {
+    width: $desktop-content-width;
+  }
+  @include tablet {
+    width: $tablet-content-width;
+  }
   div#partner_logos {
-
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		@include desktop {
+		  margin: 0 -5%;
+		}
+		@include tablet {
+			margin: 0 -5%;
+		}
+		div.partner-logo-div {
+		  padding: 0 5%;
+		  img.partner-image {
+		    width: 100%;
+		  }
+		}
   }
 }

@@ -36,10 +36,10 @@ div#form_container {
 						font-size: 1em;
 						background-color: $form_button_color;
 						transition: all .1s linear;
-					}
-					&[type="submit"]:hover {
-						background-color: $form_button_hover_color;
-					}
+						&:hover {
+							background-color: $form_button_hover_color;
+						}
+					}					
 				}
 			}
 		}

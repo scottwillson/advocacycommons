@@ -1,5 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab";
-/* Variables */
+/* Screen variables */
+/* Content width variables */
 body {
   margin: 0; }
   body p {
@@ -15,16 +16,14 @@ div#header {
   margin-bottom: 1em; }
 
 div#content {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 5%;
-  padding-right: 5%; }
+  margin: 0 auto;
+  padding: 0 5%; }
   @media (min-width: 1024px) {
     div#content {
-      width: 800px; } }
+      width: 900px; } }
   @media (min-width: 768px) and (max-width: 1023px) {
     div#content {
-      width: 600px; } }
+      width: 700px; } }
   div#content div#form_title_container {
     margin-bottom: 0.5em; }
   @media (min-width: 1024px) {
@@ -48,11 +47,28 @@ div#content {
 
 div#footer {
   clear: both;
-  padding: 1em 5% 0 5%; }
+  padding-top: 1em;
+  margin: 0 auto; }
+  @media (min-width: 1024px) {
+    div#footer {
+      width: 900px; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    div#footer {
+      width: 700px; } }
   div#footer div#partner_logos {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
+    @media (min-width: 1024px) {
+      div#footer div#partner_logos {
+        margin: 0 -5%; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      div#footer div#partner_logos {
+        margin: 0 -5%; } }
+    div#footer div#partner_logos div.partner-logo-div {
+      padding: 0 5%; }
+      div#footer div#partner_logos div.partner-logo-div img.partner-image {
+        width: 100%; }
 
 /* Variables */
 div#form_title_container div#form_title {
@@ -83,8 +99,8 @@ div#form_container form#caller_data ul#main_form_elements {
         font-size: 1em;
         background-color: #bbb;
         transition: all .1s linear; }
-      div#form_container form#caller_data ul#main_form_elements li input[type="submit"]:hover {
-        background-color: #ccc; }
+        div#form_container form#caller_data ul#main_form_elements li input[type="submit"]:hover {
+          background-color: #ccc; }
 
 div#header {
   background-color: #c869bf;
