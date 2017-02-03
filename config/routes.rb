@@ -54,6 +54,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: 'json'} do
     namespace :v1 do
+      mount_devise_token_auth_for 'Person', at: 'auth'
       get '/', to: 'entry_point#show'
       resources :people
     end

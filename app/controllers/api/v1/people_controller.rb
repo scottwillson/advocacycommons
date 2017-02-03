@@ -1,4 +1,7 @@
 class Api::V1::PeopleController < ApplicationController
+  include DeviseTokenAuth::Concerns::SetUserByToken
+  before_action :authenticate_person!
+
   respond_to :json
 
   def index
