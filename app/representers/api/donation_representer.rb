@@ -1,8 +1,4 @@
-require 'roar/json/hal'
-
-class Api::DonationRepresenter < Roar::Decorator
-  include Roar::JSON::HAL
-
+class Api::DonationRepresenter < Api::Resource
   property :amount
   property :currency
 end
