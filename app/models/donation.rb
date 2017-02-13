@@ -5,4 +5,8 @@ class Donation < ApplicationRecord
   belongs_to :attendance
   has_one :payment
   has_one :recipient
+
+  def recipients
+    Array.wrap recipient
+  end
 end

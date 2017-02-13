@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170204193954) do
+ActiveRecord::Schema.define(version: 20170213015432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -192,7 +192,7 @@ ActiveRecord::Schema.define(version: 20170204193954) do
     t.datetime "action_date"
     t.float    "amount"
     t.float    "credited_amount"
-    t.datetime "created_date"
+    t.datetime "credited_date"
     t.string   "currency"
     t.string   "subscription_instance"
     t.boolean  "voided"
